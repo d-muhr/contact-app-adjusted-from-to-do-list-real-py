@@ -6,7 +6,7 @@ urlpatterns = [
     path("", views.ListListView.as_view(), name="index"),
     path("list/<int:list_id>/", views.ItemListView.as_view(), name="list"),
     # CRUD patterns for ToDoLists
-    path("list/add/", views.ListCreate.as_view(), name="list-add"),
+    path("contact/add/", views.ListCreate.as_view(), name="list-add"),
     path(
         "list/<int:pk>/delete/", views.ListDelete.as_view(), name="list-delete"
     ),
