@@ -19,8 +19,12 @@ class ToDoList(models.Model):
         return self.title
 
 
+# todo: The fields "phone" and "email" currently have to be # filled on the 2 webpages("contact/id/info/id" and 
+# "contact/id/inf/add") although it should be possible to 
+#  leave them empty. 
 class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
+    phone = models.CharField(max_length = 100)
     email = models.EmailField(max_length = 100)
     address = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
