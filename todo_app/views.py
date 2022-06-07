@@ -76,7 +76,7 @@ class ItemUpdate(UpdateView):
     def get_context_data(self):
         context = super().get_context_data()
         context["todo_list"] = self.object.todo_list
-        context["title"] = "Edit item"
+        context["title"] = "Edit contact"
         return context
 
     def get_success_url(self):
