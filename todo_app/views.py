@@ -77,6 +77,7 @@ class ItemUpdate(UpdateView):
         "phone",
         "email",
         "birthday",
+        "address",
         "description",
         "due_date",
         "notes",
