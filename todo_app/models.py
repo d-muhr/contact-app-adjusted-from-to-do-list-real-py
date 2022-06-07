@@ -24,10 +24,14 @@ class ToDoList(models.Model):
 # "contact/id/inf/add") although it should be possible to 
 #  leave them empty. 
 
-# ToDo: Creating birthday as models.DateField(...) is more
-# comple than expected which is why I will do this another 
-# time_7.6.22. The way it is currently tried results in 
-# the follwing error "ValueError: invalid literal for int() with base 10: b'a'"
+# ToDo: When I create the same contact name or contact info # within 1 contact with the same name an error occurs. 
+# Instead the user should be informed that ne name exists
+# already_7.6.22
+
+# todo: I will delete "due_date" at some point in models.py and 
+# views.py but currentyl it is too complex as it is in different
+# places (also in contact.html and in influences the order of the
+# contacts.)
 
 class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
@@ -35,7 +39,6 @@ class ToDoItem(models.Model):
     email = models.EmailField(max_length = 100)
     birthday = models.DateField(default = date.today())
     address = models.CharField(max_length=100)
-    description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     due_date = models.DateTimeField(default=one_week_hence)
     notes = models.TextField(null = True, blank = True)

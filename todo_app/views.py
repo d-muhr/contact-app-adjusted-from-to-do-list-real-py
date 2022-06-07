@@ -38,6 +38,10 @@ class ListCreate(CreateView):
         return context
 
 
+# todo: I will delete "due_date" at some point in models.py and 
+# views.py but currentyl it is too complex as it is in different
+# places (also in contact.html and in influences the order of the
+# contacts.)
 class ItemCreate(CreateView):
     model = ToDoItem
     fields = [
@@ -47,7 +51,6 @@ class ItemCreate(CreateView):
         "phone",
         "email",
         "birthday",
-        "description",
         "due_date",
         "notes",
     ]
@@ -78,7 +81,6 @@ class ItemUpdate(UpdateView):
         "email",
         "birthday",
         "address",
-        "description",
         "due_date",
         "notes",
     ]
