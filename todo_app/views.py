@@ -44,6 +44,7 @@ class ItemCreate(CreateView):
         "todo_list",
         "address",
         "title",
+        "email",
         "description",
         "due_date",
         "notes",
@@ -71,6 +72,7 @@ class ItemUpdate(UpdateView):
     fields = [
         "todo_list",
         "title",
+        "email",
         "description",
         "due_date",
         "notes",
