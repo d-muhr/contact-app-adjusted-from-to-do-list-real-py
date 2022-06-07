@@ -22,7 +22,7 @@ urlpatterns = [
         name="item-update",
     ),
     path(
-        "list/<int:list_id>/item/<int:pk>/delete/",
+        "contact/<int:list_id>/info/<int:pk>/delete/",
         views.ItemDelete.as_view(),
         name="item-delete",
     ),
