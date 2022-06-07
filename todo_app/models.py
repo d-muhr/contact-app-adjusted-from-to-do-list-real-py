@@ -40,7 +40,6 @@ class ToDoItem(models.Model):
     birthday = models.DateField(default = date.today())
     address = models.CharField(max_length=100)
     created_date = models.DateTimeField(auto_now_add=True)
-    due_date = models.DateTimeField(default=one_week_hence)
     notes = models.TextField(null = True, blank = True)
     todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
 
@@ -50,7 +49,7 @@ class ToDoItem(models.Model):
         )
 
     def __str__(self):
-        return f"{self.title}: due {self.due_date}"
+        return f"{self.title}"
 
     class Meta:
         ordering = ["title"]
