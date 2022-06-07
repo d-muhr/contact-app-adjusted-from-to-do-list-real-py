@@ -4,10 +4,10 @@
 {% block content %}
 
 
-<h3>Delete To-do Item</h3>
+<h3>Delete this contact information</h3>
 
-<p>Are you sure you want to delete the item: <b>{{ object.title }}</b>
-    <p>from the list <i>{{ todo_list.title }}</i>?</p>
+<p>Are you sure you want to delete the contact information: <b>{{ object.title }}</b>
+    <p>from the contact <i>{{ todo_list.title }}</i>?</p>
 
     <form method="POST">
         {% csrf_token %}
