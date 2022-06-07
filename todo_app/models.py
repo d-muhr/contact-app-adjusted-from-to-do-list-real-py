@@ -24,10 +24,9 @@ class ToDoList(models.Model):
 # "contact/id/inf/add") although it should be possible to 
 #  leave them empty. 
 
-# ToDo: Creating birthday as models.DateField(...) is more
-# comple than expected which is why I will do this another 
-# time_7.6.22. The way it is currently tried results in 
-# the follwing error "ValueError: invalid literal for int() with base 10: b'a'"
+# ToDo: When I create the same contact name or contact info # within 1 contact with the same name an error occurs. 
+# Instead the user should be informed that ne name exists
+# already_7.6.22
 
 class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
