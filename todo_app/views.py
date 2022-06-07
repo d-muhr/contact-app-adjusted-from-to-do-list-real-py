@@ -44,8 +44,12 @@ class ItemCreate(CreateView):
         "todo_list",
         "address",
         "title",
+        "phone",
+        "email",
+        "birthday",
         "description",
         "due_date",
+        "notes",
     ]
 
     def get_initial(self):
@@ -70,9 +74,13 @@ class ItemUpdate(UpdateView):
     fields = [
         "todo_list",
         "title",
+        "phone",
+        "email",
+        "birthday",
         "address",
         "description",
         "due_date",
+        "notes",
     ]
 
     def get_context_data(self):

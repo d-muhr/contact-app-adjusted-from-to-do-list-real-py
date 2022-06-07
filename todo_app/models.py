@@ -19,12 +19,24 @@ class ToDoList(models.Model):
         return self.title
 
 
+# todo: The fields "phone" and "email" currently have to be # filled on the 2 webpages("contact/id/info/id" and 
+# "contact/id/inf/add") although it should be possible to 
+#  leave them empty. 
+
+# ToDo: Creating birthday as models.DateField(...) is more
+# comple than expected which is why I will do this another 
+# time_7.6.22.
+
 class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
+    phone = models.CharField(max_length = 100)
+    email = models.EmailField(max_length = 100)
+    birthday = models.CharField(max_length = 100)
     address = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     due_date = models.DateTimeField(default=one_week_hence)
+    notes = models.TextField(null = True, blank = True)
     todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
