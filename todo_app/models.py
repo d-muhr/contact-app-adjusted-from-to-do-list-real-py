@@ -28,10 +28,7 @@ class ToDoList(models.Model):
 # Instead the user should be informed that ne name exists
 # already_7.6.22
 
-# todo: I will delete "due_date" at some point in models.py and 
-# views.py but currentyl it is too complex as it is in different
-# places (also in contact.html and in influences the order of the
-# contacts.)
+
 
 class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
@@ -40,7 +37,6 @@ class ToDoItem(models.Model):
     birthday = models.DateField(default = date.today())
     address = models.CharField(max_length=100)
     created_date = models.DateTimeField(auto_now_add=True)
-    due_date = models.DateTimeField(default=one_week_hence)
     notes = models.TextField(null = True, blank = True)
     todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
 
@@ -50,7 +46,7 @@ class ToDoItem(models.Model):
         )
 
     def __str__(self):
-        return f"{self.title}: due {self.due_date}"
+        return f"{self.title}"
 
     class Meta:
         ordering = ["title"]
