@@ -47,7 +47,6 @@ class ItemCreate(CreateView):
         "phone",
         "email",
         "birthday",
-        "description",
         "due_date",
         "notes",
     ]
@@ -78,7 +77,6 @@ class ItemUpdate(UpdateView):
         "email",
         "birthday",
         "address",
-        "description",
         "due_date",
         "notes",
     ]
