@@ -70,6 +70,7 @@ class ItemUpdate(UpdateView):
     fields = [
         "todo_list",
         "title",
+        "address",
         "description",
         "due_date",
     ]
