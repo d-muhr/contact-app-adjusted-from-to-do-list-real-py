@@ -57,7 +57,7 @@ class ItemCreate(CreateView):
         context = super().get_context_data()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
-        context["title"] = "Create a new item"
+        context["title"] = "Create a new contact information"
         return context
 
     def get_success_url(self):
