@@ -42,6 +42,7 @@ class ItemCreate(CreateView):
     model = ToDoItem
     fields = [
         "todo_list",
+        "address",
         "title",
         "description",
         "due_date",
