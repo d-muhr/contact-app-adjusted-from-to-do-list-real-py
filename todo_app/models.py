@@ -45,6 +45,10 @@ class ToDoItem(models.Model):
             "item-update", args=[str(self.todo_list.id), str(self.id)]
         )
 
+    # todo: below probably nothing changes when I use 
+    # "return self.title" intead of "f..."_22/06/08 like it is used
+    # in the class "ToDoList". I shortend it because before the
+    # due_date was involved.
     def __str__(self):
         return f"{self.title}"
 
