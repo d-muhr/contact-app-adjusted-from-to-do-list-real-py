@@ -12,7 +12,7 @@
     <input type="submit" value="Submit">
     <input value="Cancel" type="button" onclick="location.href='{% url "list" todo_list.id %}'">
     {% if object %}
-    <input value="Delete this contact information" type="button"
+    <input value="Delete this contact" type="button"
         onclick="location.href='{% url "item-delete" todo_list.id object.id %}'">
     {% endif %}
 </form>
