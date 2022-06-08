@@ -43,10 +43,10 @@ class ItemCreate(CreateView):
     model = ToDoItem
     fields = [
         "todo_list",
-        "address",
         "title",
         "phone",
         "email",
+        "address",
         "birthday",
         "notes",
     ]
@@ -75,8 +75,8 @@ class ItemUpdate(UpdateView):
         "title",
         "phone",
         "email",
-        "birthday",
         "address",
+        "birthday",
         "notes",
     ]
 
