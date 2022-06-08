@@ -34,7 +34,7 @@ class ListCreate(CreateView):
 
     def get_context_data(self):
         context = super().get_context_data()
-        context["title"] = "Add a new contact"
+        context["title"] = "Add a new contact-list"
         return context
 
 
