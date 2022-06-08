@@ -5,7 +5,7 @@
 <div>
     <div>
         <div>
-            <h3>Edit contact:</h3>
+            <h3>Edit contact-list:</h3>
             <h5>{{ todo_list.title|upper}}</h5>
         </div>
         <ul>
@@ -17,12 +17,12 @@
                     </div>
             </li>
             {% empty %}
-            <p>There is no further information about this contact.</p>
+            <p>There is no contact in this contact-list.</p>
             {% endfor %}
         </ul>
         <p>
-            <input value="Add a new contact information" type="button" onclick="location.href='{% url "item-add" todo_list.id %}'" />
-            <input value="Delete this contact" type="button"
+            <input value="Add a new contact to this contact-list" type="button" onclick="location.href='{% url "item-add" todo_list.id %}'" />
+            <input value="Delete this contact-list" type="button"
                 onclick="location.href='{% url "list-delete" todo_list.id %}'" />
         </p>
     </div>
