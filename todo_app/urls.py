@@ -4,7 +4,7 @@ from todo_app import views
 
 urlpatterns = [
     path("", views.ListListView.as_view(), name="index"),
-    path("contact/<int:list_id>/", views.ItemListView.as_view(), name="list"),
+    path("contact_list/<int:list_id>/", views.ItemListView.as_view(), name="list"),
     # CRUD patterns for ToDoLists
     path("contact/add/", views.ListCreate.as_view(), name="list-add"),
     path(
