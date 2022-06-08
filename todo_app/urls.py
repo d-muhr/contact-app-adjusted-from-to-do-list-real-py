@@ -17,7 +17,7 @@ urlpatterns = [
         name="item-add",
     ),
     path(
-        "contact/<int:list_id>/info/<int:pk>/",
+        "contact_list/<int:list_id>/contact/<int:pk>/",
         views.ItemUpdate.as_view(),
         name="item-update",
     ),
