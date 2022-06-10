@@ -4,5 +4,5 @@
 Link of the original To Do List App:
 https://github.com/realpython/materials/tree/master/django-todo-list
 
-Statement that the original To Do List App (as the other material) has an MIT License:
+Statement that the original To Do List App (as the other material) has a MIT License:
 https://github.com/realpython/materials
