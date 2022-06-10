@@ -97,7 +97,7 @@ class ContactListDelete(DeleteView):
     success_url = reverse_lazy("index")
 
 
-class ItemDelete(DeleteView):
+class ContactDelete(DeleteView):
     model = ToDoItem
 
     def get_success_url(self):

@@ -23,7 +23,7 @@ urlpatterns = [
     ),
     path(
         "contact_list/<int:list_id>/contact/<int:pk>/delete/",
-        views.ItemDelete.as_view(),
+        views.ContactDelete.as_view(),
         name="item-delete",
     ),
 ]
