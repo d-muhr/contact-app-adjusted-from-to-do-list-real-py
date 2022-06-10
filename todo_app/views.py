@@ -90,7 +90,7 @@ class ContactUpdate(UpdateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ListDelete(DeleteView):
+class ContactListDelete(DeleteView):
     model = ToDoList
     # You have to use reverse_lazy() instead of reverse(),
     # as the urls are not loaded when the file is imported.
