@@ -15,7 +15,7 @@ class ListListView(ListView):
     template_name = "todo_app/index.html"
 
 
-class ItemListView(ListView):
+class ContactListView(ListView):
     model = ToDoItem
     template_name = "todo_app/contact.html"
 
