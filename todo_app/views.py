@@ -68,7 +68,7 @@ class ContactCreate(CreateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ItemUpdate(UpdateView):
+class ContactUpdate(UpdateView):
     model = ToDoItem
     fields = [
         "todo_list",

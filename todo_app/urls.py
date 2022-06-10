@@ -18,7 +18,7 @@ urlpatterns = [
     ),
     path(
         "contact_list/<int:list_id>/contact/<int:pk>/",
-        views.ItemUpdate.as_view(),
+        views.ContactUpdate.as_view(),
         name="item-update",
     ),
     path(
