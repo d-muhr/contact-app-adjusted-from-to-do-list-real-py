@@ -10,12 +10,12 @@ from django.views.generic import (
 from .models import ToDoItem, ToDoList
 
 
-class ListListView(ListView):
+class ContactListListView(ListView):
     model = ToDoList
     template_name = "todo_app/index.html"
 
 
-class ItemListView(ListView):
+class ContactListView(ListView):
     model = ToDoItem
     template_name = "todo_app/contact.html"
 
@@ -28,7 +28,7 @@ class ItemListView(ListView):
         return context
 
 
-class ListCreate(CreateView):
+class ContactListCreate(CreateView):
     model = ToDoList
     fields = ["title"]
 
@@ -39,7 +39,7 @@ class ListCreate(CreateView):
 
 
 
-class ItemCreate(CreateView):
+class ContactCreate(CreateView):
     model = ToDoItem
     fields = [
         "todo_list",
@@ -68,7 +68,7 @@ class ItemCreate(CreateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ItemUpdate(UpdateView):
+class ContactUpdate(UpdateView):
     model = ToDoItem
     fields = [
         "todo_list",
@@ -90,14 +90,14 @@ class ItemUpdate(UpdateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ListDelete(DeleteView):
+class ContactListDelete(DeleteView):
     model = ToDoList
     # You have to use reverse_lazy() instead of reverse(),
     # as the urls are not loaded when the file is imported.
     success_url = reverse_lazy("index")
 
 
-class ItemDelete(DeleteView):
+class ContactDelete(DeleteView):
     model = ToDoItem
 
     def get_success_url(self):
