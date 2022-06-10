@@ -6,6 +6,7 @@ from django.urls import reverse
 
 from datetime import date
 
+#ToDo: the 2 lines below can probably be deleted, as the are not used anymore. (22/06/11)
 def one_week_hence():
     return timezone.now() + timezone.timedelta(days=7)
 
