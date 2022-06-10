@@ -10,7 +10,7 @@ def one_week_hence():
     return timezone.now() + timezone.timedelta(days=7)
 
 
-class ContactList(models.Model):
+class ToDoList(models.Model):
     title = models.CharField(max_length=100, unique=True)
 
     def get_absolute_url(self):
@@ -38,7 +38,7 @@ class ToDoItem(models.Model):
     address = models.CharField(max_length=100)
     created_date = models.DateTimeField(auto_now_add=True)
     notes = models.TextField(null = True, blank = True)
-    todo_list = models.ForeignKey(ContactList, on_delete=models.CASCADE)
+    todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse(
@@ -47,7 +47,7 @@ class ToDoItem(models.Model):
 
     # todo: below probably nothing changes when I use 
     # "return self.title" intead of "f..."_22/06/08 like it is used
-    # in the class "ContactList". I shortend it because before the
+    # in the class "ToDoList". I shortend it because before the
     # due_date was involved.
     def __str__(self):
         return f"{self.title}"

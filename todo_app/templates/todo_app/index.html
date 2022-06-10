@@ -7,11 +7,11 @@
 <h3>All my contact-lists</h3>
 {% endif %}
 <ul>
-    {% for contactlist in object_list %}
+    {% for todolist in object_list %}
     <li>
         <div role="button"
-            onclick="location.href='{% url "list" contactlist.id %}'">
-            {{ contactlist.title }}
+            onclick="location.href='{% url "list" todolist.id %}'">
+            {{ todolist.title }}
         </div>
     </li>
     {% empty %}
