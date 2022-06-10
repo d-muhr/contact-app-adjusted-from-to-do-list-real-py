@@ -39,7 +39,7 @@ class ContactListCreate(CreateView):
 
 
 
-class ItemCreate(CreateView):
+class ContactCreate(CreateView):
     model = ToDoItem
     fields = [
         "todo_list",

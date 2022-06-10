@@ -13,7 +13,7 @@ urlpatterns = [
     # CRUD patterns for ToDoItems
     path(
         "contact_list/<int:list_id>/contact/add/",
-        views.ItemCreate.as_view(),
+        views.ContactCreate.as_view(),
         name="item-add",
     ),
     path(
