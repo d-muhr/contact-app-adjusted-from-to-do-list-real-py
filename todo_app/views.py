@@ -7,11 +7,11 @@ from django.views.generic import (
     UpdateView,
     DeleteView,
 )
-from .models import ToDoItem, ToDoList
+from .models import ToDoItem, ContactList
 
 
 class ContactListListView(ListView):
-    model = ToDoList
+    model = ContactList
     template_name = "todo_app/index.html"
 
 
@@ -24,12 +24,12 @@ class ContactListView(ListView):
 
     def get_context_data(self):
         context = super().get_context_data()
-        context["todo_list"] = ToDoList.objects.get(id=self.kwargs["list_id"])
+        context["todo_list"] = ContactList.objects.get(id=self.kwargs["list_id"])
         return context
 
 
 class ContactListCreate(CreateView):
-    model = ToDoList
+    model = ContactList
     fields = ["title"]
 
     def get_context_data(self):
@@ -53,13 +53,13 @@ class ContactCreate(CreateView):
 
     def get_initial(self):
         initial_data = super().get_initial()
-        todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
+        todo_list = ContactList.objects.get(id=self.kwargs["list_id"])
         initial_data["todo_list"] = todo_list
         return initial_data
 
     def get_context_data(self):
         context = super().get_context_data()
-        todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
+        todo_list = ContactList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
         context["title"] = "Create a new contact"
         return context
@@ -91,7 +91,7 @@ class ContactUpdate(UpdateView):
 
 
 class ContactListDelete(DeleteView):
-    model = ToDoList
+    model = ContactList
     # You have to use reverse_lazy() instead of reverse(),
     # as the urls are not loaded when the file is imported.
     success_url = reverse_lazy("index")
