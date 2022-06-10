@@ -28,7 +28,7 @@ class ContactListView(ListView):
         return context
 
 
-class ListCreate(CreateView):
+class ContactListCreate(CreateView):
     model = ToDoList
     fields = ["title"]
 
