@@ -20,11 +20,11 @@ class ContactListView(ListView):
     template_name = "todo_app/contact.html"
 
     def get_queryset(self):
-        return ToDoItem.objects.filter(todo_list_id=self.kwargs["contact_id"])
+        return ToDoItem.objects.filter(todo_list_id=self.kwargs["list_id"])
 
     def get_context_data(self):
         context = super().get_context_data()
-        context["todo_list"] = ToDoList.objects.get(id=self.kwargs["contact_id"])
+        context["todo_list"] = ToDoList.objects.get(id=self.kwargs["list_id"])
         return context
 
 
@@ -53,13 +53,13 @@ class ContactCreate(CreateView):
 
     def get_initial(self):
         initial_data = super().get_initial()
-        todo_list = ToDoList.objects.get(id=self.kwargs["contact_id"])
+        todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         initial_data["todo_list"] = todo_list
         return initial_data
 
     def get_context_data(self):
         context = super().get_context_data()
-        todo_list = ToDoList.objects.get(id=self.kwargs["contact_id"])
+        todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
         context["title"] = "Create a new contact"
         return context
@@ -101,7 +101,7 @@ class ContactDelete(DeleteView):
     model = ToDoItem
 
     def get_success_url(self):
-        return reverse_lazy("list", args=[self.kwargs["contact_id"]])
+        return reverse_lazy("list", args=[self.kwargs["list_id"]])
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
