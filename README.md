@@ -1,6 +1,6 @@
 # contact app adjusted from to do list real py
-  I adjusted the to do list app by Real-Python.com and extended it to make it a contact app. This was a training project which I did after having done the official Django-Tutorial in order to get to know CRUD and Django in general better to enable me to make an entirely own project in Django soon. 
-
+  I adjusted the to do list app by Real-Python.com and extended it to make it a contact app. This was a training project which I did after having done the official Django-Tutorial in order to get to know CRUD and Django in general better to enable me to make an entirely own project in Django soon. I also used this training project to regularly "break things on purpose" to better understand the inner workings of Django.
+  
 Link of the original To Do List App:
 https://github.com/realpython/materials/tree/master/django-todo-list
 
